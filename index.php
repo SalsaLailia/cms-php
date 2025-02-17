@@ -2,9 +2,11 @@
 include "layouts/header.php";
 include "layouts/navbar.php";
 
-// if (isset($_GET['page'])){
-//     $page = $_GET
-// }
+if (isset($_GET['page'])){
+    $page = $_GET;
+}else{
+    $page = 'home';
+}
 
 switch ($page) {
     case 'home':
@@ -14,5 +16,5 @@ switch ($page) {
         include "views/guest/home.php";
         break;
 }
-include "layout/footer.php";
+include "layouts/footer.php";
 ?>
