@@ -1,7 +1,6 @@
 <?php
 include "layouts/header.php";
 include "layouts/navbar.php";
-include "layouts/footer.php";
 
 // if (isset($_GET['page'])){
 //     $page = $_GET
@@ -9,10 +8,10 @@ include "layouts/footer.php";
 
 switch ($page) {
     case 'home':
-        include "view/home.php";
+        include "views/guest/home.php";
         break;
     default:
-        include "view/home.php";
+        include "views/guest/home.php";
         break;
 }
 include "layout/footer.php";
