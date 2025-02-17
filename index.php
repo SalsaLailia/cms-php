@@ -3,7 +3,7 @@ include "layouts/header.php";
 include "layouts/navbar.php";
 
 if (isset($_GET['page'])){
-    $page = $_GET;
+    $page = $_GET['page'];
 }else{
     $page = 'home';
 }
@@ -11,6 +11,12 @@ if (isset($_GET['page'])){
 switch ($page) {
     case 'home':
         include "views/guest/home.php";
+        break;
+    case 'about-us':
+        include "views/guest/about-us.php";
+        break;
+    case 'portofolio-detail':
+        include "views/guest/portofolio-detail.php";
         break;
     default:
         include "views/guest/home.php";

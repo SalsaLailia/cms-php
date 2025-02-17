@@ -7,7 +7,7 @@
                   <button type="button" class="btn btn-outline-light">About Us</button>
                 </div>
                 <div class="col-6 col-sm-12">
-                  <img class="img-fluid" src="foto.web__1.png" alt="">
+                  <img class="img-fluid" src="public/images/foto.web.png" alt="">
                 </div>
             </div>
             <!-- grid sistem -->
@@ -24,7 +24,7 @@
         </div>
         <div class="row row-cols-1 row-cols-md-2 mt-5">
           <div class="col-6 col-sm-12">
-            <img class="img-fluid" src="apk porto.png" alt="">
+            <img class="img-fluid" src="public/images/apk porto.png" alt="">
           </div>
           <div class="col-sm-12">
             <div class="row mb-5">
