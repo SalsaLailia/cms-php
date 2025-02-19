@@ -1,6 +1,7 @@
 <main>
 <div class="container-fluid px-4">
     <h3>Table Portofolio</h3>
+    <a href="" class="btn btn-primary">Tambah</a>
     <table class="table">
   <thead>
     <tr>
@@ -11,23 +12,23 @@
     </tr>
   </thead>
   <tbody>
+    <?php
+    $no = 1;
+    while($data = mysqli_fetch_assoc($result)){
+    ?>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row"><?= $no?></th>
+      <td><?= $data['judul']?></td>
+      <td><?= $data['gambar']?></td>
+      <td>
+        <a href="" class="btn btn-primary">Edit</a>
+        <a href="" class="btn btn-danger">Hapus</a>
+    </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    <?php
+        $no++;
+        }
+    ?>
   </tbody>
 </table>
     </div>
