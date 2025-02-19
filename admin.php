@@ -13,7 +13,11 @@ switch($page){
         include "views/admin/dashboard.php";
         break;
     case "portofolio-table":
+        include "controller/portofolio/table.php";
         include "views/admin/portofolio/table.php";
+        break;
+    case "portofolio-create":
+        include "views/admin/portofolio/create.php";
         break;
 }
 
