@@ -19,6 +19,12 @@ switch($page){
     case "portofolio-create":
         include "views/admin/portofolio/create.php";
         break;
+    case "portofolio-store":
+        include "controller/portofolio/store.php";
+        break;
+    case "portofolio-destroy":
+        include "controller/portofolio/destroy.php";
+        break;
 }
 
 include "layouts/admin/footer.php";

@@ -1,7 +1,7 @@
 <main>
 <div class="container-fluid px-4">
     <h3>Table Portofolio</h3>
-    <a href="" class="btn btn-primary">Tambah</a>
+    <a href="?page=portofolio-create" class="btn btn-primary">Tambah</a>
     <table class="table">
   <thead>
     <tr>
@@ -21,8 +21,14 @@
       <td><?= $data['judul']?></td>
       <td><?= $data['gambar']?></td>
       <td>
+        <div class="d-flex gap-2">
         <a href="" class="btn btn-primary">Edit</a>
-        <a href="" class="btn btn-danger">Hapus</a>
+        <!-- <a href="" class="btn btn-danger">Hapus</a> -->
+        <form action="?page=portofolio-destroy" method="post">
+          <input type="hidden" value="<?= $data['id'] ?>" name="id">
+          <button type="submit" name="submit" class="btn btn-danger">Hapus</button>
+        </form>
+        </div>
     </td>
     </tr>
     <?php

@@ -8,7 +8,7 @@ $deskripsi = $_POST['deskripsi'];
 $sql = "insert into portofolio (judul, gambar, deskripsi) values ('$judul','$gambar','$deskripsi')";
 $connect->query($sql);
 
-header("location: /admin.php?page=portofolio-table");
+header("location: /cms-php/admin.php?page=portofolio-table");
 
 
 ?>
