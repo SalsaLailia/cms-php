@@ -19,10 +19,10 @@
     <tr>
       <th scope="row"><?= $no?></th>
       <td><?= $data['judul']?></td>
-      <td><?= $data['gambar']?></td>
+      <td><img src="public/images/<?= $data['gambar']?>" alt="" style="width: 100px;"></td>
       <td>
         <div class="d-flex gap-2">
-        <a href="" class="btn btn-primary">Edit</a>
+        <a href="?page=portofolio-edit&id=<?= $data['id']?>" class="btn btn-primary">Edit</a>
         <!-- <a href="" class="btn btn-danger">Hapus</a> -->
         <form action="?page=portofolio-destroy" method="post">
           <input type="hidden" value="<?= $data['id'] ?>" name="id">

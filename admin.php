@@ -25,6 +25,13 @@ switch($page){
     case "portofolio-destroy":
         include "controller/portofolio/destroy.php";
         break;
+    case "portofolio-edit":
+        include "controller/portofolio/edit.php";
+        include "views/admin/portofolio/edit.php";
+        break;
+    case "portofolio-update":
+        include "controller/portofolio/update.php";
+        break;
 }
 
 include "layouts/admin/footer.php";

@@ -22,23 +22,28 @@
             <p class="fs-5 border-bottom border-2 border-primary">Portofolio yang sudah pernah saya buat selama saya belajar di sekolah</p>
           </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 mt-5">
-          <div class="col-6 col-sm-12">
+        <!-- <div class="row row-cols-1 row-cols-md-2 mt-5"> -->
+          <!-- <div class="col-6 col-sm-12">
             <img class="img-fluid" src="public/images/apk porto.png" alt="">
-          </div>
-          <div class="col-sm-12">
-            <div class="row mb-5">
-              <h3><i class="fs-2 bi bi-badge-3d"></i> Modeling atau 3D sculpting</h3>
-              <p>Pembuatan konten 3D, termasuk modeling, animasi, dan rendering.</p>
-            </div>
-            <div class="row mb-5">
-              <h3><i class="fs-2 bi bi-globe-asia-australia"></i> Panorama 3D atau visualisasi 3D</h3>
-              <p>Pembuatan panorama 3D atau visualisasi 3D dari sebuah tempat atau lingkungan. Ini sering digunakan dalam pembuatan tur virtual, aplikasi arsitektur, atau bahkan di video game.</p>
-            </div>
-            <div class="row mb-5">
-              <h3><i class="fs-2 bi bi-file-earmark-image"></i> Desain dan pengeditan</h3>
-              <p>Menciptakan atau memodifikasi gambar, video, teks, dan elemen grafis lainnya</p>
-            </div>
-          </div>
+          </div> -->
+          <!-- <div class="col-sm-12"> -->
+          <div class="row row-cols-1 row-cols-md-3 mt-5">
+            <?php
+            while($portofolio = mysqli_fetch_assoc($result)){
+            ?>
+            <!-- <div class="row mb-5">
+              <h3><i class="fs-2 bi bi-badge-3d"></i> <?= $portofolio['judul']?></h3>
+              <p><?= $portofolio['deskripsi']?></p>
+            </div> -->
+
+            
+        <div class="col">
+          <img src="public/images/<?= $portofolio['gambar']?>" alt class="img-fluid">
+          <p class="mt-3">11 Febuari 2025</p>
+          <h3 class="mt-4"><?= $portofolio['judul']?></h3>
         </div>
+            <?php }?>
+            </div>
+          </div>
+        <!-- </div> -->
       </div>

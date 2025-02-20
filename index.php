@@ -10,6 +10,7 @@ if (isset($_GET['page'])){
 
 switch ($page) {
     case 'home':
+        include "controller/home.php";
         include "views/guest/home.php";
         break;
     case 'about-us':
